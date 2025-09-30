@@ -1,0 +1,11 @@
+property_code,property_name,region,capacity
+LDN-HQ,London HQ,London,2500
+BRI-01,Bristol Harbourside,South West,1800
+EDI-EX,Edinburgh Exchange,Scotland,1200
+MCH-CC,Manchester City Campus,North West,1500
+LDS-AR,Leeds Arena Point,Yorkshire,1100
+BHM-PR,Birmingham Paradise,Midlands,1300
+CDF-BY,Cardiff Bay,Wales,900
+BEL-LG,Belfast Lagan,Northern Ireland,700
+NRW-QP,Norwich Quarter,East,600
+GLW-CL,Glasgow Clyde,Scotland,1000
