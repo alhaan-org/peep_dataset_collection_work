@@ -15,7 +15,7 @@ Building Access Logs – who badged in/out of which building, with timestamps.
 Property Master List – the official list of properties (with codes, addresses, etc.).
 
 Tasks (Step by Step)
-1. Data Understanding & Quality
+- # Data Understanding & Quality
 
 Look at the 3 datasets.
 
@@ -31,7 +31,7 @@ Inconsistent naming (e.g., “Prop-001” vs “001”).
 
 Then decide how to fix (clean) them using Excel, SQL, or Python.
 
-2. Analysis
+- # Analysis
 
 Do some number crunching:
 
@@ -54,7 +54,7 @@ Do this by property and over time (daily, weekly, or monthly trend).
 Flag Risk Situations:
 If a PEEP-required person visits a building but their PEEP status isn’t Active, mark it as a risk.
 
-3. Storytelling (Slides)
+- # Storytelling (Slides)
 
 Make 1–2 slides that summarize for leaders (non-technical). Keep it sharp:
 
@@ -77,7 +77,7 @@ Implement automated alerts when a PEEP-required colleague badged into a property
 
 Regularly audit registry data to prevent outdated statuses (Pending/Expired).
 
-4. Optional Stretch (Data Quality Rules)
+- # Optional Stretch (Data Quality Rules)
 
 Propose some rules for better data hygiene:
 
