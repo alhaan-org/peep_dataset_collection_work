@@ -2,6 +2,106 @@
 
 In this repo: I have cleaned peep registry logs and peep occupancy logs in the given dataset according to client requirements. If there are errors in data processing, issues are welcomed and will be further improved and effort to resolve these issues first hand:
 
+# Problem Summary:
+Big Question:
+👉 “Are the company’s buildings safe if someone who needs extra help in an emergency (PEEP) comes in?”
+
+They gave you 3 data sources:
+
+PEEP Registry – list of people who need a Personal Emergency Evacuation Plan, and their status (Active, Pending, Expired, Revoked, etc.).
+
+Building Access Logs – who badged in/out of which building, with timestamps.
+
+Property Master List – the official list of properties (with codes, addresses, etc.).
+
+Tasks (Step by Step)
+1. Data Understanding & Quality
+
+Look at the 3 datasets.
+
+Spot issues like:
+
+Duplicate entries (e.g., someone badged in twice in one minute).
+
+Missing values (empty PEEP status, missing property codes).
+
+Format mismatches (dates stored as text, property IDs not matching master list).
+
+Inconsistent naming (e.g., “Prop-001” vs “001”).
+
+Then decide how to fix (clean) them using Excel, SQL, or Python.
+
+2. Analysis
+
+Do some number crunching:
+
+Daily Occupancy per Property:
+Count how many unique people visit each property per day.
+
+Identify PEEP Visitors:
+From those visitors, check how many are flagged in the PEEP registry.
+
+PEEP Presence Rate:
+Formula:
+
+PEEP Presence Rate = PEEP Visitors / All Visitors
+
+	​
+
+
+Do this by property and over time (daily, weekly, or monthly trend).
+
+Flag Risk Situations:
+If a PEEP-required person visits a building but their PEEP status isn’t Active, mark it as a risk.
+
+3. Storytelling (Slides)
+
+Make 1–2 slides that summarize for leaders (non-technical). Keep it sharp:
+
+Headline (the “so what”):
+Example: “10% of building visits involve people with evacuation needs — but 30% of those visits are in sites where their plans are not active.”
+
+Visuals (2–3 max):
+
+Line chart → PEEP presence rate trend over time.
+
+Bar chart → PEEP visits per property.
+
+Risk map/table → properties with highest risk.
+
+Recommendations (3 points, practical):
+
+Standardize property codes to avoid mismatches.
+
+Implement automated alerts when a PEEP-required colleague badged into a property without an active plan.
+
+Regularly audit registry data to prevent outdated statuses (Pending/Expired).
+
+4. Optional Stretch (Data Quality Rules)
+
+Propose some rules for better data hygiene:
+
+Property codes must match master list exactly.
+
+Timestamps must be valid (no future dates, must have both IN and OUT).
+
+No duplicate badge swipes within 1 minute.
+
+PEEP status should only be one of the allowed categories (Active, Pending, Expired, Revoked).
+
+Missing values → flagged for review.
+
+And suggest monitoring using automated checks (SQL queries, dashboards, or Power BI/Excel reports).
+
+What to Submit
+
+Short note (~1 page):
+List the data quality issues and how you cleaned them.
+
+Slides (1–2):
+Storytelling, visuals, recommendations.
+
+Your cleaned files or steps (Excel steps, Power Query, or Jupyter Notebook).
 Below are the scripts of Data Cleaning techniques using Pandas:
 
 # Step 1
